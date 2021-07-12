@@ -18,13 +18,15 @@
 
 #### synchronized
 
-#### 获取锁机制，锁升级
+##### 获取锁机制，锁升级
+
+##### 重量级锁操作
 
 #### lock
 
 ##### 基础方法
 
-| 方法名                                   | 含义                                                         |
+| 方法名称                                 | 作用                                                         |
 | ---------------------------------------- | ------------------------------------------------------------ |
 | void lock()                              | 获得锁。                                                     |
 | void lockInterruptibly()                 | 获取锁定，除非当前线程是 interrupted 。                      |
@@ -33,3 +35,4 @@
 | boolean tryLock(long time,TimeUnit unit) | 如果在给定的等待时间内是空闲的，并且当前的线程尚未得到 interrupted则获取该锁。 |
 | void unlock()                            | 释放锁。                                                     |
 
+Lock是一个基础接口，如果想要使用就需要拿他的实现类，譬如ReentrantLock 、 ReentrantReadWriteLock.ReadLock 、ReentrantReadWriteLock.WriteLock 
